@@ -1,14 +1,14 @@
 {
     "0": {
-        "name": "Sala",
-        "description": "Questo luogo e' abbastanza accogliente nonostante il senso di claustrofobia che ti trasmette",
+        "name": "2F",
+        "description": "Qua inizia la tua avventura, mentre Strozzi sta interrogando. Devi riuscire a scappare.",
         "color": "white"
     },
 
     "1": {
-        "name": "Cucina",
-        "description": "E' tutto molto disordinato. Sembra che nessuno abbia riordinato da molto tempo",
-        "color": "red"
+        "name": "1P°",
+        "description": "E' tutto molto disordinato. Sembra che nessuno abbia PULITO da molto tempo",
+        "color": "white"
     },
     
     "2": {
