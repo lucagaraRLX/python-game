@@ -7,7 +7,7 @@ WRONG_INTERACTION_RESPONSES = [
     "non lo so rick",
     "It's rewind time",
     "modern problems require modern solutions",
-    "Kowalski, anlysis",
+    "Kowalski, analysis",
     "Ok, tieniti i tuoi segreti",
     "excuse me what the fuck"
 ]
