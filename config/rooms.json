@@ -7,13 +7,19 @@
 
     "1": {
         "name": "1P°",
-        "description": "E' tutto molto disordinato. Sembra che nessuno abbia PULITO da molto tempo",
+        "description": "E' tutto molto disordinato. Sembra che nessuno abbia PULITO da molto tempo.",
         "color": "white"
     },
     
     "2": {
-        "name": "Sogno",
-        "description": "sei evidentemente in un sogno",
-        "color": "black"
+        "name": "PT",
+        "description": "E' giunto il momento di uscire, ma la Patty ti ostacola perche' non hai il permesso.",
+        "color": "white"
+    },
+
+    "3": {
+        "name" : "2P°",
+        "description" : "L'ultimo piano e anche l'ultima speranza di trovare il permesso",
+        "color" : "white"
     }
 }

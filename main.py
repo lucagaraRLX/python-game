@@ -4,12 +4,12 @@ from random import choice
 import sys
 
 WRONG_INTERACTION_RESPONSES = [
-    "non succede nulla",
-    "non funziona",
-    "niente da fare",
-    "non credo sia la cosa giusta da fare",
-    "non credo proprio",
-    "non e'il caso"
+    "non lo so rick",
+    "It's rewind time",
+    "modern problems require modern solutions",
+    "Kowalski, anlysis",
+    "Ok, tieniti i tuoi segreti",
+    "excuse me what the fuck"
 ]
 IS_WINDOWS = sys.platform.lower() == "win32"
 

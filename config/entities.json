@@ -5,43 +5,55 @@
         "description": "Prof simpatico, meno quando interroga",
         "interactions":  {
             "no-item": {
-                "message": "Chiedi di uscire, ma lui ti chiede prima di risolvere l'esercizio alla lavagna."
+                "message": "Chiedi di uscire, ma lui ti chiede prima di risolvere l'esercizio alla lavagna"
+            },
+
+            "U" : {
+                "message" : "Mostri a Strozzi il permesso, cosi' ti fa uscire dalla classe",
+                "transform" : "K"
             }
         }
     },
 
     "L": {
         "name": "Lavagna",
-        "description": "Una bella lavagna con un bellissimo esercizio da compito sopra.",
+        "description": "Una bella lavagna con un bellissimo esercizio da compito sopra",
         "color": "black",
         "interactions": {
             "no-item": {
-                "message": "Provi a risolverlo ma non ti ricordi il seno di 30°."
+                "message": "Provi a risolverlo ma non ti ricordi il seno di 30°"
             },
             "C": {
-                "message": "Con la calcolatrice lo risolvi e ottieni il permesso di andare in bagno.",
-                "transform": "K"
+                "message": "Con la calcolatrice lo risolvi e ottieni il permesso di andare in bagno",
+                "transform": "K",
+                "remove_from_inventory" : true
             }
         }
     },
 
     "M": {
         "name": "Monta",
-        "description": "Ladro professionista, sicuramente ha quello che ti serve.",
+        "description": "Ladro professionista, sicuramente ha quello che ti serve",
         "color": "cyan",
         "interactions": {
             "no-item": {
-                "message": "Gli chiedi se ha una calcolatrice e ti risponde 'certo Uaglio' '.",
-                "transform": "C",
-                "pickup": true
+                "message": "Gli chiedi se ha una calcolatrice e ti risponde 'certo Uaglio' '",
+                "transform": "C"
             }
         }
     },
 
     "C": {
         "name": "Calcolatrice",
-        "description": "Assomiglia alla tua vecchia calcolatrice caduta per terra e che non hai piu' trovato.",
-        "color": "yellow"
+        "description": "Assomiglia alla tua vecchia calcolatrice caduta per terra e che non hai piu' trovato",
+        "color": "yellow",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Hai preso la calcolatrice",
+                "pickup" : true,
+                "transform" : " "
+            }
+        }
     },
 
     "1": {
@@ -51,7 +63,8 @@
         "interactions": {
             "K": {
                 "message": "si apre, finalmente puoi uscire",
-                "move_to_room": 1
+                "move_to_room": 1,
+                "remove_from_inventory" : true
             }
         }
     },
@@ -68,17 +81,242 @@
         }
     },
 
-    "K": {
-        "name": "chiave",
-        "description": "e' una piccola chiave",
-        "color": "yellow",
+    "2" : {
+        "name" : "porta",
+        "description" : "e' una porta",
+        "color" : "blue",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Mentre cerchi di uscire Gambini ti ferma dicendo che ti deve interrogare"
+            },
+
+            "K" : {
+                "message" : "Pavarini che legge l'Odissea distrae Gambini, cosi' riesci a scappare",
+                "move_to_room" : 2
+            },
+
+            "U" : {
+                "message" : "Mostri il permesso a Gambini, che e' obbligato a farti passare",
+                "move_to_room" : 2
+            }
+        }
+    },
+
+    "F": {
+        "name" : "Franca",
+        "description" : "La bidella piu' migliore sul mondo",
+        "color" : "blue",
         "interactions": {
-            "no-item": {
-                "message": "la raccogli",
-                "transform": " ",
-                "pickup": true
+            "no-item" : {
+                "message" : "Sempre forza Inter"
+            },
+
+            "X" : {
+                "message" : "Dai la circolare alla Franca",
+                "transform" : "E",
+                "remove_from_inventory" : true
+            }
+        }
+    },
+
+    "P" : {
+        "name" : "Pavo",
+        "description" : "Dio fatto insegnante",
+        "color" : "green",
+        "interactions": {
+            "no-item" : {
+                "message" : "BAH, voi informatici"
+            },
+
+            "O" : {
+                "message" : "**Inizia a leggere l'Odissea**",
+                "transform" : "K",
+                "remove_from_inventory" : true
+            }
+        }
+    },
+
+    "." : {
+        "name" : "Daniele Cenini",
+        "description" : "Si diletta nel puntinismo",
+        "color" : "red",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Se ti vuoi giustificare devi studiare l'Odissea",
+                "transform" : "O"
+            }
+        }
+    },
+
+    "X" : {
+        "name" : "Circolare",
+        "description" : "una bellissima circolare da leggere",
+        "color" : "black",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Hai preso la circolare",
+                "pickup" : true,
+                "transform" : " "
+            }
+        }
+    },
+
+    "O" : {
+        "name" :"Odissea",
+        "description" : "UBRIS",
+        "color" : "cyan",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Hai preso l'Odissea",
+                "pickup" : true,
+                "transform" : " "
+            }
+        }
+    },
+
+    "E" : {
+        "name" : "Scopa",
+        "description" : "Sembra non sia mai stata usata",
+        "color" : "magenta",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Hai preso la scopa",
+                "pickup" : true,
+                "transform" : " "
+            }
+        }
+    },
+
+    "K" : {
+        "name" : "Chiave",
+        "description" : "Una chiave",
+        "color" : "yellow",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Hai preso la chiave",
+                "pickup" : true,
+                "transform" : " "
+            }
+        }
+    },
+
+    "B" : {
+        "name" : "Bruno",
+        "description" : "il migliore",
+        "color" : "black",
+        "interactions": {
+            "no-item" : {
+                "message" : "Bruno ti chiede cos'e' un JSON, ma non sai rispondere",
+                "game_over" : "Non sapendo rispondere a Bruno vieni mandato a studiare informatica e non puoi piu' uscire"
+            },
+
+            "J" : {
+                "message" : "Ti chiede cos'e' un JSON e tu riesci a spiegarglielo brillantemente",
+                "remove_from_inventory" : true
+            }
+        }
+    },
+
+    "@" : {
+        "name" : "Lorella",
+        "description" : "Colei che gestisce la segreteria",
+        "color" : "green",
+        "interactions": {
+            "no-item" : {
+                "message" : "Fermandoti in segreteria Lorella ti da una circolare per Franca",
+                "transform" : "X"
+            }
+        }
+    },
+
+    "4" : {
+        "name" : "Uscita",
+        "description" : "L'unico ostacolo che ti separa dalla liberta'",
+        "color" : "blue",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Provi ad uscire ma la Patty ti chiede il permesso"
+            },
+
+            "U" : {
+                "message" : "Facendo vedere il permesso alla Patty lei ti lascia uscire",
+                "win" : "Dopo molte fatiche sei riuscito finalmente ad uscire dalla scuola"
+            }
+        }
+    },
+
+    "3" : {
+        "name" : "porta",
+        "description" : "e' una porta",
+        "color" : "blue",
+        "interactions" : {
+            "no-item" : {
+                "message" : "si apre",
+                "move_to_room" : 3
+            }
+        }
+    },
+
+    "V" : {
+        "name" : "Valcavi",
+        "description" : "orlrlrlrlr",
+        "color" : "magenta",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Marco, Matteo orlrlrlrlrlrl",
+                "transform" : " "
+            }
+        }
+    },
+
+    "J" : {
+        "name" : "JSON",
+        "description" : "Formato di interscambio",
+        "color" : "yellow",
+        "interactions" : {
+            "no-item" : {
+                "message" : "potrebbe essere utile, decidi di raccorglierlo",
+                "pickup" : true,
+                "transform" : " "
+            }
+        }
+    },
+
+    "G" : {
+        "name" : "Gianluca",
+        "description" : "C'e' Gianluca?",
+        "color" : "green",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Incontri Gianlu che ha una cosa da darti",
+                "transform" : "U"
+            }
+        }
+    },
+
+    "U" : {
+        "name" : "Permesso d'uscita",
+        "description" : "Il permesso che ti serve per uscire",
+        "color" : "red",
+        "interactions" : {
+            "no-item" : {
+                "message" : "Finalmente sei riuscito ad ottenere il permesso ed ora e' il momento si uscire",
+                "pickup" : true,
+                "transform" : " "
+            }
+        }
+    },
+
+    "!" : {
+        "name" : "Sporco",
+        "description" : "Strana sostanza che si e' formata sul pavimento a causa della mancanza di pulizia",
+        "color" : "black",
+        "interactions" : {
+            "E" : {
+                "message" : "La scopa sembra perfetta per pulire lo sporco... Noti qualcosa nascosto sotto lo sporco",
+                "transform" : "U"
             }
         }
     }
-
 }
+
